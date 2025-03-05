@@ -22,8 +22,7 @@ The project includes:
 - **Java** - Core programming language.  
 - **JavaFX** - GUI framework for creating interactive applications.  
 - **Numerical Methods** - Used for solving equations and performing interpolation.  
-- **Maven** *(optional)* - Dependency management.  
-- **JUnit** *(if included)* - For testing mathematical calculations.  
+- **Maven**  - Dependency management.  
 
 ## Screenshots
   Here are some preview of the application :
