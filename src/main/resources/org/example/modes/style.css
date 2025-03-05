@@ -1,0 +1,71 @@
+.root {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 18px;
+    -fx-padding: 20px;
+    -fx-background-color: #f0f0f0;
+}
+
+.button {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #4CAF50;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 120px;
+    -fx-cursor: hand;
+    -fx-border-radius: 5;
+}
+
+.button-switch {
+    -fx-background-color: #2196F3;
+}
+
+.button-clear {
+    -fx-background-color: #FFC107;
+}
+
+.button-exit {
+    -fx-background-color: #F44336;
+}
+
+.button-find {
+    -fx-background-color: #8BC34A;
+}
+
+.text-field {
+    -fx-font-size: 18px;
+    -fx-pref-height: 56px;
+    -fx-pref-width: 100px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.label-equation {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.label-result {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .root {
+        -fx-font-size: 14px;
+    }
+    .button {
+        -fx-font-size: 14px;
+        -fx-pref-height: 32px;
+        -fx-pref-width: 90px;
+    }
+    .text-field {
+        -fx-font-size: 16px;
+        -fx-pref-height: 48px;
+        -fx-pref-width: 80px;
+    }
+    .label-equation, .label-result {
+        -fx-font-size: 16px;
+    }
+}

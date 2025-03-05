@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.modes.ScreenControl">
+    <children>
+        <Button layoutX="64.0" layoutY="297.0" mnemonicParsing="false" onAction="#swig" text="switch mode" />
+        <Button layoutX="178.0" layoutY="194.0" mnemonicParsing="false" onAction="#clear_out" prefHeight="26.0" prefWidth="66.0" text="Clear" />
+        <Button layoutX="483.0" layoutY="310.0" mnemonicParsing="false" onAction="#Exit_out" prefHeight="26.0" prefWidth="55.0" text="Exit" />
+        <Button layoutX="314.0" layoutY="194.0" mnemonicParsing="false" onAction="#find3" prefHeight="26.0" prefWidth="66.0" text="Find" />
+        <TextField fx:id="t2" layoutX="236.0" layoutY="93.0" prefHeight="56.0" prefWidth="55.0" />
+        <TextField fx:id="t1" layoutX="335.0" layoutY="98.0" prefHeight="56.0" prefWidth="55.0" />
+        <TextField fx:id="t0" layoutX="443.0" layoutY="101.0" prefHeight="56.0" prefWidth="55.0" />
+        <Label layoutX="300.0" layoutY="119.0" text="x" />
+        <Label layoutX="316.0" layoutY="110.0" prefHeight="17.0" prefWidth="23.0" text="2" />
+        <Label layoutX="327.0" layoutY="121.0" text="+" />
+        <Label layoutX="405.0" layoutY="118.0" text="x     +" />
+        <Label layoutX="511.0" layoutY="120.0" prefHeight="17.0" prefWidth="55.0" text="=      0" />
+        <TextField fx:id="t3" layoutX="139.0" layoutY="91.0" prefHeight="56.0" prefWidth="55.0" />
+        <Label layoutX="202.0" layoutY="113.0" text="x" />
+        <Label layoutX="209.0" layoutY="102.0" prefHeight="17.0" prefWidth="23.0" text="3" />
+        <Label layoutX="217.0" layoutY="113.0" text="+" />
+      <TextField fx:id="t4" layoutX="37.0" layoutY="92.0" prefHeight="56.0" prefWidth="55.0" />
+      <Label layoutX="123.0" layoutY="113.0" text="+" />
+      <Label layoutX="104.0" layoutY="118.0" text="x" />
+      <Label layoutX="112.0" layoutY="102.0" prefHeight="17.0" prefWidth="23.0" text="4" />
+      <Label layoutX="264.0" layoutY="241.0" prefHeight="17.0" prefWidth="131.0" fx:id="x1" />
+      <Label layoutX="264.0" layoutY="269.0" prefHeight="17.0" prefWidth="112.0" fx:id="x2" />
+      <Label layoutX="264.0" layoutY="297.0" prefHeight="17.0" prefWidth="112.0" fx:id="x3" />
+      <Label layoutX="264.0" layoutY="328.0" prefHeight="17.0" prefWidth="98.0" fx:id="x4" />
+    </children>
+</AnchorPane>

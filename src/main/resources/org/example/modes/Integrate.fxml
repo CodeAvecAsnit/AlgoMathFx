@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.modes.Integrate">
+   <children>
+      <TextField fx:id="lower" layoutX="207.0" layoutY="177.0" prefHeight="58.0" prefWidth="54.0" />
+      <TextField fx:id="Function" layoutX="275.0" layoutY="130.0" prefHeight="51.0" prefWidth="264.0" />
+      <Button layoutX="157.0" layoutY="285.0" mnemonicParsing="false" onAction="#find" prefHeight="37.0" prefWidth="99.0" text="Integrate" />
+      <Button layoutX="475.0" layoutY="26.0" mnemonicParsing="false" onAction="#switch_Mode" prefHeight="26.0" prefWidth="111.0" text="Switch Mode" />
+      <Button fx:id="exit" layoutX="440.0" layoutY="285.0" mnemonicParsing="false" onAction="#Exit" prefHeight="37.0" prefWidth="71.0" text="Exit" />
+      <TextField fx:id="upper" layoutX="207.0" layoutY="72.0" prefHeight="58.0" prefWidth="54.0" />
+      <ImageView fitHeight="150.0" fitWidth="99.0" layoutX="78.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="189.0" fitWidth="148.0" layoutX="54.0" layoutY="52.0">
+         <image>
+            <Image url="@../../../integra.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="566.0" layoutY="143.0" prefHeight="26.0" prefWidth="17.0" scaleX="3.0" scaleY="3.0" text="dx" />
+      <Label fx:id="answer" layoutX="290.0" layoutY="218.0" prefHeight="37.0" prefWidth="248.0" />
+   </children>
+</AnchorPane>

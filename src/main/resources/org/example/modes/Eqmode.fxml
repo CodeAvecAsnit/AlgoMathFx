@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.modes.Eqmode">
+   <children>
+      <Button layoutX="236.0" layoutY="143.0" mnemonicParsing="false" onAction="#Screen1" prefHeight="26.0" prefWidth="77.0" text="Quadratic" />
+      <Button layoutX="236.0" layoutY="218.0" mnemonicParsing="false" onAction="#Screen2" prefHeight="26.0" prefWidth="77.0" text="Cubic" />
+      <Button layoutX="45.0" layoutY="332.0" mnemonicParsing="false" onAction="#get_now" prefHeight="26.0" prefWidth="77.0" text="Exit" />
+      <Button layoutX="473.0" layoutY="332.0" mnemonicParsing="false" onAction="#swagger" prefHeight="26.0" prefWidth="95.0" text="Switch Mode" />
+      <Label layoutX="200.0" layoutY="63.0" prefHeight="17.0" prefWidth="158.0" text="Chosee the type of function " />
+   </children>
+</AnchorPane>
