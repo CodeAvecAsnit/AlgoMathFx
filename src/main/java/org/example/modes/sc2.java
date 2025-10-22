@@ -8,13 +8,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import Calculate.Newton;
+import Calculate.NewtonRaphson;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * @author : Asnit Bakhati
+ */
 public class sc2{
 
     @FXML
@@ -29,7 +32,7 @@ public class sc2{
     @FXML
     public Label x3;
 
-     private Newton n = new Newton();
+     private NewtonRaphson n = new NewtonRaphson();
     @FXML
     public AnchorPane pane;
 
@@ -92,6 +95,4 @@ public class sc2{
         stage = (Stage) pane.getScene().getWindow();
         stage.close();
     }
-
-
 }

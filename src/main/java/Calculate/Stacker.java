@@ -1,7 +1,13 @@
 package Calculate;
 import java.util.Stack;
 
-public class stacker{
+
+/**
+ * @author : Asnit Bakhati
+ */
+
+public class Stacker {
+
     public static class node{
         public String data;
         public node next;
@@ -9,22 +15,18 @@ public class stacker{
             this.data=d;
         }
     }
+
     private node head;
 
     public int count;
 
-
-
-    stacker(){
+    Stacker(){
         this.head=null;
     }
-
-
 
     public boolean IsEmpty(){
         return head==null;
     }
-
 
     public void push(String arg){
         ++count;
@@ -34,7 +36,6 @@ public class stacker{
         }
         head=newnode;
     }
-
 
 
     public void pop(){
@@ -60,8 +61,6 @@ public class stacker{
     }
 
 
-
-
     public void display(){
         if(!IsEmpty()){
             node temp=head;
@@ -74,9 +73,7 @@ public class stacker{
     }
 
 
-
-
-    public String get_last(){
+    public String getLast(){
         if(IsEmpty()){
             System.out.println("Error");
             return null;
@@ -86,8 +83,7 @@ public class stacker{
     }
 
 
-
-    public String get_2nd(){
+    public String getSecond(){
             if(IsEmpty()||head.next==null){
                 System.out.println("Error");
                 return null;
@@ -98,7 +94,7 @@ public class stacker{
 
   public double calculate(){
         Stack<Double> ds=new Stack<>();
-        test t=new test();
+        Checker t=new Checker();
          node bird=head;
          while(bird!=null){
              if(t.check_Sign(t.characterize(bird.data))){
@@ -123,7 +119,7 @@ public class stacker{
 
                      case '^':
                          int kk=(int)k;
-                         ds.push(get_power(l,kk));
+                         ds.push(getPower(l,kk));
                          break;
 
                      default:
@@ -139,18 +135,15 @@ public class stacker{
 return ds.pop();
   }
 
-  private double get_power(double a,int b){
+  private double getPower(double a, int b){
         if(b==0){
             return 1;
         }else if(b==1){
             return a;
         }else{
-            return a*get_power(a,b-1);
+            return a* getPower(a,b-1);
         }
   }
-
-
-
 }
 
 

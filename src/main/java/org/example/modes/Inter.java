@@ -1,5 +1,6 @@
 package org.example.modes;
-import Calculate.Linked;
+
+import Calculate.LinkedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,13 +11,16 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import Calculate.Internode;
+import Calculate.InterNode;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * @author : Asnit Bakhati
+ */
 public class Inter {
 
-   Linked ofx=new Linked();
+   LinkedList ofx=new LinkedList();
     @FXML
     public TextField x;
     @FXML
@@ -28,35 +32,30 @@ public class Inter {
 
     @FXML
     public TextField interpolate;
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-    private  Stage st;
-
 
 
     public void close_out(ActionEvent e){
-        st=(Stage)pane.getScene().getWindow();
+        Stage st = (Stage) pane.getScene().getWindow();
         st.close();
     }
 
     public void switch_modes(ActionEvent e) throws IOException {
-        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mode.fxml")));
-        stage=(Stage) ((javafx.scene.Node)e.getSource()).getScene().getWindow();
-        scene= new Scene(root);
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mode.fxml")));
+        Stage stage = (Stage) ((javafx.scene.Node) e.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
     @FXML
     public void generate(ActionEvent e) {
-        Internode newnode = null;
+        InterNode newnode = null;
         try {
             float xVal = Float.parseFloat(x.getText());
             float fxVal = Float.parseFloat(fx.getText());
-            newnode = new Internode(xVal, fxVal);
+            newnode = new InterNode(xVal, fxVal);
         } catch (Exception ex) {
-            showAlert("Error", "Please enter valid inputs");
+            showAlert("Please enter valid inputs");
             return;
         }
         ofx.add(newnode);
@@ -65,7 +64,7 @@ public class Inter {
         try {
             in = Float.parseFloat(interpolate.getText());
         } catch (NumberFormatException ex) {
-            showAlert("Error", "Please enter a valid interpolation value");
+            showAlert("Please enter a valid interpolation value");
             x.setText("");
             fx.setText("");
             return;
@@ -73,9 +72,9 @@ public class Inter {
 
         float interpolated = 0;
 
-        for (Internode temp = ofx.head; temp != null; temp = temp.next) {
+        for (InterNode temp = ofx.head; temp != null; temp = temp.next) {
             float mul = temp.fx;
-            for (Internode semp = ofx.head; semp != null; semp = semp.next) {
+            for (InterNode semp = ofx.head; semp != null; semp = semp.next) {
                 if (semp != temp) {
                     mul *= (in - semp.x) / (temp.x - semp.x);
                 }
@@ -97,19 +96,19 @@ public class Inter {
     }
 
     public void add(ActionEvent e) {
-        Internode newnode = null;
+        InterNode newnode = null;
         try {
-            newnode = new Internode(Float.parseFloat(x.getText()), Float.parseFloat(fx.getText()));
+            newnode = new InterNode(Float.parseFloat(x.getText()), Float.parseFloat(fx.getText()));
         } catch (Exception ex) {
-            showAlert("Error", "Please enter valid inputs");
+            showAlert("Please enter valid inputs");
         }
         ofx.add(newnode);
         x.setText("");
         fx.setText("");
     }
-    private void showAlert(String title, String message) {
+    private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);
+        alert.setTitle("Error");
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();

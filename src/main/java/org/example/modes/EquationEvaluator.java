@@ -12,13 +12,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class Eqmode {
+
+/**
+ * @author : Asnit Bakhati
+ */
+
+public class EquationEvaluator {
 
 
     @FXML
     public AnchorPane pane;
-
-    private Stage stage;
 
     private Stage st;
     private Scene scene;
@@ -26,7 +29,7 @@ public class Eqmode {
 
     @FXML
     public void get_now(ActionEvent e){
-        stage=(Stage)pane.getScene().getWindow();
+        Stage stage = (Stage) pane.getScene().getWindow();
         stage.close();
     }
 
@@ -37,6 +40,7 @@ public class Eqmode {
         st.setScene(scene);
         st.show();
     }
+
     public void Screen2(ActionEvent e) throws IOException {
         root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Screen2.fxml")));
         st=(Stage) ((Node)e.getSource()).getScene().getWindow();
@@ -44,14 +48,7 @@ public class Eqmode {
         st.setScene(scene);
         st.show();
     }
-   /*public void Screen3(ActionEvent e) throws IOException {
-        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Screen3.fxml")));
-        st=(Stage) ((Node)e.getSource()).getScene().getWindow();
-        scene=new Scene(root);
-        st.setScene(scene);
-        st.show();
-    }
-*/
+
     public void swagger(ActionEvent e) throws IOException {
         root=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mode.fxml")));
         st=(Stage) ((Node)e.getSource()).getScene().getWindow();

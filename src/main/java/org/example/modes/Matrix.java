@@ -13,6 +13,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class Matrix{
 
@@ -48,14 +49,10 @@ public class Matrix{
     public Label x3;
     @FXML
     AnchorPane Pane;
-    private Stage stage;
-    private Stage st;
-    private Scene scene;
-    private Parent root;
 
 
     public void Generate(ActionEvent e){
-        double [][] k=new double[3][4];
+        double [][] k= new double[3][4];
         try {
             k[0][0] = Double.parseDouble(a00.getText());
             k[0][1] = Double.parseDouble(a01.getText());
@@ -80,20 +77,20 @@ public class Matrix{
             x2.setText(String.valueOf(k[1][3]));
             x3.setText(String.valueOf(k[2][3]));
         }catch (Exception ex){
-            showAlert("Invalid Input","Enter valid Inputs");
+            showAlert();
         }
 
     }
 
     public void Switch_mode(ActionEvent e)throws IOException{
-        root= FXMLLoader.load(getClass().getResource("mode.fxml"));
-        stage=(Stage) ((Node)e.getSource()).getScene().getWindow();
-        scene=new Scene(root);
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mode.fxml")));
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void Exit(ActionEvent e){
-        st=(Stage)Pane.getScene().getWindow();
+        Stage st = (Stage) Pane.getScene().getWindow();
         st.close();
     }
 
@@ -136,11 +133,11 @@ public class Matrix{
         return a;
     }
 
-    private void showAlert(String title, String message) {
+    private void showAlert() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);
+        alert.setTitle("Invalid Input");
         alert.setHeaderText(null);
-        alert.setContentText(message);
+        alert.setContentText("Enter valid Inputs");
         alert.showAndWait();
     }
 }

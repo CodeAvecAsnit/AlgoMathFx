@@ -35,7 +35,7 @@ public class Modecontrol{
 
     }
     public void equation(ActionEvent e)throws IOException{
-        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Eqmode.fxml")));
+        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EquationEvaluator.fxml")));
         st1=(Stage) ((Node)e.getSource()).getScene().getWindow();
         scene=new Scene(root);
         st1.setScene(scene);

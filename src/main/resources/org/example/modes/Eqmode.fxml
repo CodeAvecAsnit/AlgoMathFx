@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.modes.Eqmode">
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.modes.EquationEvaluator">
    <children>
       <Button layoutX="236.0" layoutY="143.0" mnemonicParsing="false" onAction="#Screen1" prefHeight="26.0" prefWidth="77.0" text="Quadratic" />
       <Button layoutX="236.0" layoutY="218.0" mnemonicParsing="false" onAction="#Screen2" prefHeight="26.0" prefWidth="77.0" text="Cubic" />

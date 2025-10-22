@@ -1,18 +1,20 @@
 package Calculate;
 
-import org.example.modes.Calculator;
+/**
+ * @author : Asnit Bakhati
+ */
 
-public class Get_result{
+public class CalculatorProgram {
 
     public String Calculator_program(String cpu){
 
 
-        Evalutate calculate = new Evalutate();
+        Evalutator calculate = new Evalutator();
         char[] curry = cpu.toCharArray();
 
 
         int start = 0;
-        test tester = new test();
+        Checker tester = new Checker();
         for (int i = 0; i < cpu.length(); ++i) {
             if (tester.check_Sign(curry[i])) {
                 if (i > start) {

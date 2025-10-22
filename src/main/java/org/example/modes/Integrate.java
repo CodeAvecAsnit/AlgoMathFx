@@ -1,7 +1,7 @@
 package org.example.modes;
 
 import javafx.event.ActionEvent;
-import Calculate.Get_result;
+import Calculate.CalculatorProgram;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -18,7 +18,7 @@ import java.util.Objects;
 
 public class Integrate {
 
-    Get_result anchor = new Get_result();
+    CalculatorProgram anchor = new CalculatorProgram();
 
     @FXML
     public Label answer;
@@ -85,7 +85,7 @@ public class Integrate {
     }
 
     public float floater(String fc, float x) {
-        Get_result anchor = new Get_result();
+        CalculatorProgram anchor = new CalculatorProgram();
         try {
             fc = fc.replace("x", String.valueOf(x));
             fc = fc.replace("X", String.valueOf(x));

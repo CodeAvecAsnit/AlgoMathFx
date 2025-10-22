@@ -1,6 +1,6 @@
 package org.example.modes;
 
-import Calculate.Newton;
+import Calculate.NewtonRaphson;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,36 +15,48 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * @author : Asnit Bakhati
+ */
+
 public class ScreenControl {
+
     @FXML
     public TextField t0;
+
     @FXML
     public TextField t1;
+
     @FXML
     public TextField t2;
+
     @FXML
     public TextField t3;
+
     @FXML
     public TextField t4;
+
 
     @FXML
     public AnchorPane pane;
 
+
     @FXML
     public Label x1;
+
     @FXML
     public Label x2;
+
     @FXML
     public Label x3;
+
     @FXML
     public Label x4;
 
 
     private Stage stage;
-    private Scene scene;
-    private Parent root;
 
-    private Newton n = new Newton();
+    private final NewtonRaphson n = new NewtonRaphson();
 
     public void find3(ActionEvent e) {
         int degree = 4;
@@ -68,8 +80,8 @@ public class ScreenControl {
         }
 
         var = n.horn(var, xne1, degree + 1);
-        for (int j = 0; j < var.length; j++) {
-            if (Float.isNaN(var[j])) {
+        for (float value : var) {
+            if (Float.isNaN(value)) {
                 x4.setText("horn returned NaN coefficient");
                 return;
             }
@@ -84,8 +96,8 @@ public class ScreenControl {
         }
 
         var = n.horn(var, xne1, degree + 1);
-        for (int j = 0; j < var.length; j++) {
-            if (Float.isNaN(var[j])) {
+        for (float v : var) {
+            if (Float.isNaN(v)) {
                 x4.setText("horn returned NaN coefficient");
                 return;
             }
@@ -128,12 +140,13 @@ public class ScreenControl {
 
     @FXML
     public void swig(ActionEvent e) throws IOException {
-        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mode.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mode.fxml")));
         stage=(Stage) ((Node)e.getSource()).getScene().getWindow();
-        scene=new Scene(root);
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
     public void Exit_out(ActionEvent e){
         stage=(Stage)pane.getScene().getWindow();

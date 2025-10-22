@@ -1,8 +1,16 @@
 package Calculate;
-public class Evalutate{
-    private final stacker Opcode=new stacker();
-    private final stacker rev=new stacker();
-    private final stacker Operator=new stacker();
+
+/**
+ * @author : Asnit Bakhati
+ */
+
+public class Evalutator {
+
+    private final Stacker Opcode=new Stacker();
+    private final Stacker rev=new Stacker();
+    private final Stacker Operator=new Stacker();
+
+
     private boolean check_Sign(char a){
         return (a=='-'||a=='+'||a=='*'||a=='('||a==')'||a=='/'||a=='^'||a=='&');
     }
@@ -11,12 +19,12 @@ public class Evalutate{
         if(check_Sign(d.charAt(0))){
             Operator.push(d);
             if(Operator.count>1){
-                precedence(characterize(Operator.get_last()),characterize(Operator.get_2nd()));
+                precedence(characterize(Operator.getLast()),characterize(Operator.getSecond()));
             }
-            if(Operator.get_last().equals(")")){
+            if(Operator.getLast().equals(")")){
                 Operator.pop();
-                while(!Operator.get_last().equals("(")){
-                    Opcode.push(Operator.get_last());
+                while(!Operator.getLast().equals("(")){
+                    Opcode.push(Operator.getLast());
                     Operator.pop();
                 }
                 Operator.pop();
@@ -28,11 +36,11 @@ public class Evalutate{
 
     public double see(){
         while(!Operator.IsEmpty()){
-            Opcode.push(Operator.get_last());
+            Opcode.push(Operator.getLast());
             Operator.pop();
         }
         while(!Opcode.IsEmpty()){
-            rev.push(Opcode.get_last());
+            rev.push(Opcode.getLast());
             Opcode.pop();
         }
         return rev.calculate();
@@ -42,16 +50,16 @@ public class Evalutate{
 
     private void precedence(char last,char last2){
      if(last2=='^'||last2=='&'){
-         Opcode.push(Operator.get_2nd());
+         Opcode.push(Operator.getSecond());
          Operator.pop2();
      }else if(last2=='*'||last2=='/'){
          if(last=='+'||last=='/'||last=='*'||last=='-'){
-             Opcode.push(Operator.get_2nd());
+             Opcode.push(Operator.getSecond());
              Operator.pop2();
          }
      }else if(last2=='-'||last2=='+'){
          if(last=='-'||last=='+'){
-             Opcode.push(Operator.get_2nd());
+             Opcode.push(Operator.getSecond());
              Operator.pop2();
          }
      }
@@ -60,8 +68,5 @@ public class Evalutate{
     private char characterize(String str){
         return str.charAt(0);
     }
-
-
-
 
 }

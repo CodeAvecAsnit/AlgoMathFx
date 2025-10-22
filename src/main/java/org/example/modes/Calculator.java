@@ -14,12 +14,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * @author : Asnit Bakhati
+ */
 public class Calculator {
-    private Stage st;
-    private Scene scene;
-    private Parent root;
 
-    private Get_result jacket=new Get_result();
+    private final CalculatorProgram jacket=new CalculatorProgram();
 
     String main="";
 
@@ -211,9 +211,9 @@ public class Calculator {
 
 
     public void Switch_md(ActionEvent actionEvent) throws IOException {
-        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mode.fxml")));
-        st=(Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mode.fxml")));
+        Stage st = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         st.setScene(scene);
         st.show();
     }

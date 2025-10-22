@@ -14,6 +14,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * @author : Asnit Bakhati
+ */
 public class sc1 {
     @FXML
     public TextField t0;
@@ -33,8 +36,6 @@ public class sc1 {
     public Label x2;
 
     private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     @FXML
     public void find1(ActionEvent e) {
@@ -62,9 +63,9 @@ public class sc1 {
 
     @FXML
     public void swig(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mode.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mode.fxml")));
         stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }

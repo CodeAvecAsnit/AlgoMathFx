@@ -1,11 +1,15 @@
 package Calculate;
 
-public class Internode {
+/**
+ * @author : Asnit Bakhati
+ */
+
+public class InterNode {
     public float x;
     public float fx;
-    public Internode next;
+    public InterNode next;
 
-    public Internode(float a,float b)
+    public InterNode(float a, float b)
     {
         this.x=a;
         this.fx=b;

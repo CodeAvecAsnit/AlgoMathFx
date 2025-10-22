@@ -1,6 +1,11 @@
 package Calculate;
 
-public class Newton {
+
+/**
+ * @author : Asnit Bakhati
+ */
+
+public class NewtonRaphson {
 
     public float function(float[] arr, int degree, float x) {
         float ret = 0;

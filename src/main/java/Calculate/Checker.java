@@ -1,5 +1,11 @@
 package Calculate;
-public class test {
+
+
+/**
+ * @author : Asnit Bakhati
+ */
+
+public class Checker {
 
     public char characterize(String str){
         return str.charAt(0);
