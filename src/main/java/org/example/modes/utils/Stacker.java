@@ -1,4 +1,5 @@
-package Calculate;
+package org.example.modes.utils;
+
 import java.util.Stack;
 
 

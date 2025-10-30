@@ -8,7 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import Calculate.NewtonsMethod;
+import org.example.modes.utils.NewtonsMethod;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 

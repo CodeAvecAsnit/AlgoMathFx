@@ -1,6 +1,6 @@
 package org.example.modes;
 
-import Calculate.Calculator;
+import org.example.modes.utils.Calculator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

@@ -1,6 +1,6 @@
 package org.example.modes;
 
-import Calculate.LinkedList;
+import org.example.modes.utils.LinkedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import Calculate.InterNode;
+import org.example.modes.utils.InterNode;
 import java.io.IOException;
 import java.util.Objects;
 

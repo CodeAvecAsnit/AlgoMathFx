@@ -1,4 +1,4 @@
-package Calculate;
+package org.example.modes.utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,8 @@ public class Calculator {
 
     int precedence(String op) {
         return switch (op) {
-            case "^" -> 4;  // Power - highest precedence
-            case "~" -> 3;  // Unary minus
+            case "^" -> 4;
+            case "~" -> 3;
             case "*", "/" -> 2;
             case "+", "-" -> 1;
             default -> 0;

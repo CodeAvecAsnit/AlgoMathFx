@@ -1,4 +1,4 @@
-package Calculate;
+package org.example.modes.utils;
 
 
 /**

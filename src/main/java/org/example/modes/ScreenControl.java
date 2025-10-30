@@ -1,6 +1,6 @@
 package org.example.modes;
 
-import Calculate.NewtonsMethod;
+import org.example.modes.utils.NewtonsMethod;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
