@@ -5,25 +5,29 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="pane" prefHeight="362.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.modes.sc2">
-    <children>
-        <Button layoutX="64.0" layoutY="297.0" mnemonicParsing="false" onAction="#swig" styleClass="button-switch" text="Switch Mode" />
-        <Button layoutX="178.0" layoutY="194.0" mnemonicParsing="false" onAction="#clear_out" prefHeight="26.0" prefWidth="66.0" styleClass="button-clear" text="Clear" />
-        <Button layoutX="483.0" layoutY="310.0" mnemonicParsing="false" onAction="#Exit_out" prefHeight="26.0" prefWidth="55.0" styleClass="button-exit" text="Exit" />
-        <Button layoutX="314.0" layoutY="194.0" mnemonicParsing="false" onAction="#find1" prefHeight="26.0" prefWidth="66.0" styleClass="button-find" text="Find" />
-        <TextField fx:id="t2" layoutX="207.0" layoutY="98.0" prefHeight="56.0" prefWidth="55.0" />
-        <TextField fx:id="t1" layoutX="319.0" layoutY="98.0" prefHeight="56.0" prefWidth="55.0" />
-        <TextField fx:id="t0" layoutX="443.0" layoutY="101.0" prefHeight="56.0" prefWidth="55.0" />
-        <Label layoutX="299.0" layoutY="118.0" styleClass="label-equation" text="x²" />
-        <Label layoutX="310.0" layoutY="121.0" text="+" />
-        <Label layoutX="404.0" layoutY="118.0" styleClass="label-equation" text="x" />
-        <Label layoutX="536.0" layoutY="121.0" styleClass="label-equation" text="= 0" />
-        <TextField fx:id="t3" layoutX="85.0" layoutY="98.0" prefHeight="56.0" prefWidth="55.0" />
-        <Label layoutX="175.0" layoutY="118.0" styleClass="label-equation" text="x³" />
-        <Label layoutX="196.0" layoutY="121.0" text="+" />
-        <Label layoutX="265.0" layoutY="245.0" styleClass="label-result" text="x₁ :" fx:id="x1" />
-        <Label layoutX="265.0" layoutY="280.0" styleClass="label-result" text="x₂ :" fx:id="x2" />
-        <Label layoutX="265.0" layoutY="316.0" styleClass="label-result" text="x₃ :" fx:id="x3" />
-      <Label layoutX="427.0" layoutY="120.0" text="+" />
-    </children>
+<AnchorPane fx:id="pane" prefHeight="362.0" prefWidth="600.0" stylesheets="@style.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.modes.sc2">
+    <Button layoutX="64.0" layoutY="297.0" mnemonicParsing="false" onAction="#swig" styleClass="button-switch"
+            text="Switch Mode"/>
+    <Button layoutX="178.0" layoutY="194.0" mnemonicParsing="false" onAction="#clear_out" prefHeight="26.0"
+            prefWidth="66.0" styleClass="button-clear" text="Clear"/>
+    <Button layoutX="483.0" layoutY="310.0" mnemonicParsing="false" onAction="#Exit_out" prefHeight="26.0"
+            prefWidth="55.0" styleClass="button-exit" text="Exit"/>
+    <Button layoutX="314.0" layoutY="194.0" mnemonicParsing="false" onAction="#find1" prefHeight="26.0"
+            prefWidth="66.0" styleClass="button-find" text="Find"/>
+    <TextField fx:id="t2" layoutX="207.0" layoutY="98.0" prefHeight="56.0" prefWidth="55.0"/>
+    <TextField fx:id="t1" layoutX="319.0" layoutY="98.0" prefHeight="56.0" prefWidth="55.0"/>
+    <TextField fx:id="t0" layoutX="443.0" layoutY="101.0" prefHeight="56.0" prefWidth="55.0"/>
+    <Label layoutX="299.0" layoutY="118.0" styleClass="label-equation" text="x²"/>
+    <Label layoutX="310.0" layoutY="121.0" text="+"/>
+    <Label layoutX="404.0" layoutY="118.0" styleClass="label-equation" text="x"/>
+    <Label layoutX="536.0" layoutY="121.0" styleClass="label-equation" text="= 0"/>
+    <TextField fx:id="t3" layoutX="85.0" layoutY="98.0" prefHeight="56.0" prefWidth="55.0"/>
+    <Label layoutX="175.0" layoutY="118.0" styleClass="label-equation" text="x³"/>
+    <Label layoutX="196.0" layoutY="121.0" text="+"/>
+    <Label layoutX="265.0" layoutY="245.0" styleClass="label-result" text="x₁ :" fx:id="x1"/>
+    <Label layoutX="265.0" layoutY="280.0" styleClass="label-result" text="x₂ :" fx:id="x2"/>
+    <Label layoutX="265.0" layoutY="316.0" styleClass="label-result" text="x₃ :" fx:id="x3"/>
+    <Label layoutX="427.0" layoutY="120.0" text="+"/>
 </AnchorPane>

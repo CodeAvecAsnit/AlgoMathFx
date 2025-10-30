@@ -26,25 +26,27 @@ public class Modecontrol{
     private Stage st1;
     private Scene scene;
     private Parent root;
-    public void calculator(ActionEvent e)throws IOException{
-        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Calculator.fxml")));
+
+    public void calculatorPage(ActionEvent e)throws IOException{
+        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("CalculatorController.fxml")));
         st1=(Stage) ((Node)e.getSource()).getScene().getWindow();
         scene=new Scene(root);
         st1.setScene(scene);
         st1.show();
 
     }
-    public void equation(ActionEvent e)throws IOException{
+    public void equationPage(ActionEvent e)throws IOException{
         root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EquationEvaluator.fxml")));
         st1=(Stage) ((Node)e.getSource()).getScene().getWindow();
         scene=new Scene(root);
         st1.setScene(scene);
         st1.show();
     }
-    public void Integration(ActionEvent e) throws IOException{
+
+    public void integrationPage(ActionEvent e) throws IOException{
         stage =(Stage)pane.getScene().getWindow();
         stage.close();
-        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Integrate.fxml")));
+        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("IntegrationController.fxml")));
         st1=(Stage) ((Node)e.getSource()).getScene().getWindow();
         scene=new Scene(root);
         st1.setScene(scene);
@@ -53,24 +55,25 @@ public class Modecontrol{
 
     }
 
-    public void Matrix(ActionEvent e)throws IOException{
-        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Matrix.fxml")));
+    public void matrixPage(ActionEvent e)throws IOException{
+        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MatrixEvaluatorController.fxml")));
         st1=(Stage) ((Node)e.getSource()).getScene().getWindow();
         scene=new Scene(root);
         st1.setScene(scene);
         st1.show();
     }
-    public void Exit(ActionEvent e){
+
+    public void exitOut(ActionEvent e){
         stage =(Stage)pane.getScene().getWindow();
         stage.close();
     }
-    public void Lastone(ActionEvent e)throws IOException{
-        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Inter.fxml")));
+
+    public void lastOne(ActionEvent e)throws IOException{
+        root= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("InterpolationController.fxml")));
         st1=(Stage) ((Node)e.getSource()).getScene().getWindow();
         scene=new Scene(root);
         st1.setScene(scene);
         st1.show();
-
     }
 
 }

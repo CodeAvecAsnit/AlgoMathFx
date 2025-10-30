@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.modes.Calculator">
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.modes.CalculatorController">
    <Button fx:id="multiply" layoutX="377.0" layoutY="167.0" mnemonicParsing="false" onAction="#setMultiply" prefHeight="67.0" prefWidth="68.0" text="*" />
    <Button fx:id="minus" layoutX="286.0" layoutY="347.0" mnemonicParsing="false" onAction="#setMinus" prefHeight="67.0" prefWidth="68.0" text="-" />
    <Button fx:id="zero" layoutX="287.0" layoutY="257.0" mnemonicParsing="false" onAction="#setZero" prefHeight="67.0" prefWidth="68.0" text="0" />
@@ -24,7 +24,7 @@
    <Button layoutX="558.0" layoutY="347.0" mnemonicParsing="false" onAction="#exit" prefHeight="67.0" prefWidth="68.0" text="Exit" />
    <TextArea fx:id="ta" editable="false" layoutX="19.0" layoutY="15.0" prefHeight="120.0" prefWidth="604.0" />
    <Button fx:id="clear" layoutX="558.0" layoutY="257.0" mnemonicParsing="false" onAction="#Clear" prefHeight="67.0" prefWidth="68.0" text="Clear" />
-   <Button fx:id="delete" layoutX="469.0" layoutY="347.0" mnemonicParsing="false" onAction="#deletelast" prefHeight="67.0" prefWidth="68.0" text="Delete" />
+   <Button fx:id="delete" layoutX="469.0" layoutY="347.0" mnemonicParsing="false" onAction="#deleteLast" prefHeight="67.0" prefWidth="68.0" text="Delete" />
    <Button fx:id="power" layoutX="377.0" layoutY="347.0" mnemonicParsing="false" onAction="#power" prefHeight="67.0" prefWidth="68.0" text="^" />
-   <Button layoutX="469.0" layoutY="439.0" mnemonicParsing="false" onAction="#Switch_md" prefHeight="26.0" prefWidth="137.0" text="Switch Mode" />
+   <Button layoutX="469.0" layoutY="439.0" mnemonicParsing="false" onAction="#switchMode" prefHeight="26.0" prefWidth="137.0" text="Switch Mode" />
 </AnchorPane>

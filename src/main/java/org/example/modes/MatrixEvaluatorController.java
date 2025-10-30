@@ -15,7 +15,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class Matrix{
+/**
+ * @author : Asnit Bakhati
+ */
+
+public class MatrixEvaluatorController {
 
     @FXML
     public TextField a00;
@@ -132,7 +136,6 @@ public class Matrix{
         }
         return a;
     }
-
     private void showAlert() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Invalid Input");

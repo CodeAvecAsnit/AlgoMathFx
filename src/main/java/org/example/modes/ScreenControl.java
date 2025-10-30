@@ -1,6 +1,6 @@
 package org.example.modes;
 
-import Calculate.NewtonRaphson;
+import Calculate.NewtonsMethod;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -56,7 +56,7 @@ public class ScreenControl {
 
     private Stage stage;
 
-    private final NewtonRaphson n = new NewtonRaphson();
+    private final NewtonsMethod n = new NewtonsMethod();
 
     public void find3(ActionEvent e) {
         int degree = 4;

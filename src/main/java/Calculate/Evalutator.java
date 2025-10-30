@@ -2,6 +2,7 @@ package Calculate;
 
 /**
  * @author : Asnit Bakhati
+ * This code is now replaced with faster and smoother version
  */
 
 public class Evalutator {
@@ -15,6 +16,7 @@ public class Evalutator {
         return (a=='-'||a=='+'||a=='*'||a=='('||a==')'||a=='/'||a=='^'||a=='&');
     }
 
+    @Deprecated
     public void separate(String d){
         if(check_Sign(d.charAt(0))){
             Operator.push(d);
@@ -34,6 +36,7 @@ public class Evalutator {
         }
     }
 
+    @Deprecated
     public double see(){
         while(!Operator.IsEmpty()){
             Opcode.push(Operator.getLast());
@@ -48,6 +51,7 @@ public class Evalutator {
 
 
 
+    @Deprecated
     private void precedence(char last,char last2){
      if(last2=='^'||last2=='&'){
          Opcode.push(Operator.getSecond());
@@ -65,6 +69,7 @@ public class Evalutator {
      }
     }
 
+    @Deprecated
     private char characterize(String str){
         return str.charAt(0);
     }

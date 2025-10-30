@@ -18,7 +18,7 @@ import java.util.Objects;
 /**
  * @author : Asnit Bakhati
  */
-public class Inter {
+public class InterpolationController {
 
    LinkedList ofx=new LinkedList();
     @FXML

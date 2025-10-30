@@ -5,7 +5,7 @@ package Calculate;
  * @author : Asnit Bakhati
  */
 
-public class NewtonRaphson {
+public class NewtonsMethod {
 
     public float function(float[] arr, int degree, float x) {
         float ret = 0;
